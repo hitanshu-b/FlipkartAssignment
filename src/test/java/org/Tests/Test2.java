@@ -31,18 +31,18 @@ public class Test2 extends CommonTests {
         homePage.selectSorting();
 
         List<WebElement> products = homePage.waitForElementPresence(homePage.productList, 10).findElements(homePage.productList);
-        if (products.size() > 1) {
-            homePage.selectProducts(1);
-            homePage.addToCart();
-        } else {
-            System.out.println("Not enough products to add to cart.");
+        System.out.println(products.size());
+        if(products.size()>=2) {
+            for (int i = 1; i < products.size(); i++) {
+                homePage.selectProducts(i);
+                homePage.addToCart();
+                if (i > 3) {
+                    break;
+                }
+            }
         }
-
-        if (products.size() > 2) {
-            homePage.selectProducts(2);
-            homePage.addToCart();
-        } else {
-            System.out.println("Only two products available, can't select the third.");
+        else{
+            System.out.println(products.size()+"in list");
         }
 
         int[] prices = cartPage.getProductPrices();
