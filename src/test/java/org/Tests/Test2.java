@@ -16,12 +16,12 @@ public class Test2 extends CommonTests {
     @DataProvider(name = "searchData")
     public Object[][] getData() {
         return new Object[][]{
-                {"shoes"} // Search term
+                {"shoes"}
         };
     }
 
     @Test(dataProvider = "searchData")
-    public void validateAddToCartFunctionality(String searchTerm) {
+    public void checkAddToCartFunctionality(String searchTerm) {
         HomePage homePage = new HomePage();
         CartPage cartPage = new CartPage();
 
@@ -33,8 +33,8 @@ public class Test2 extends CommonTests {
         List<WebElement> products = homePage.waitForElementPresence(homePage.productList, 10).findElements(homePage.productList);
         System.out.println(products.size());
         if(products.size()>=2) {
-            for (int i = 1; i < products.size(); i++) {
-                homePage.selectProducts(i);
+            for (int i = 0; i < products.size(); i++) {
+                homePage.selectProducts(i+1);
                 homePage.addToCart();
                 if (i > 3) {
                     break;
@@ -42,7 +42,7 @@ public class Test2 extends CommonTests {
             }
         }
         else{
-            System.out.println(products.size()+"in list");
+            System.out.println(products.size()+" in list");
         }
 
         int[] prices = cartPage.getProductPrices();

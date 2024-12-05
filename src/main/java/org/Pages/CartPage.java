@@ -8,8 +8,8 @@ import java.util.List;
 
 public class CartPage extends CommonFunctions {
     By cartItems = By.cssSelector(".cPHDOP");
-    By productPrices = By.cssSelector(".product-price");
-    By totalPrice = By.cssSelector(".total-price");
+    By productPrices = By.cssSelector("span.b5rp0W");
+    By totalPrice = By.cssSelector("._1Y9Lgu");
 
     public List<WebElement> getCartItems() {
         return waitForElementPresence(cartItems, 10).findElements(cartItems);
