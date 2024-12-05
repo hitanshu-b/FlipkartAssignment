@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/hitan/IdeaProjects/FlipkartAssignment"><classes><class name="org.Tests.Test1"><methods><include name="checkSort"/></methods></class><class name="org.Tests.Test2"><methods><include name="validateAddToCartFunctionality"/></methods></class></classes></test></suite>
