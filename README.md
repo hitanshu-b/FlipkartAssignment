@@ -21,5 +21,5 @@
   <li>Pull the project into the local system</li>
   <li>Open it in the suitable IDE for test execution. Example: IntelliJ or Eclipse </li>
   <li>Load all the dependencies </li>
-  <li>Navigate to Test1 & Test2 class and execute them for both the problem statements</li>
+  <li>Navigate to testng.xml file and execute it for both the problem statements</li>
 </ol>
